@@ -10,3 +10,4 @@ function check(a, x) {
         }
     }
     return false;
+}
