@@ -9,5 +9,5 @@ function capitalize(s) {
         chars[i] = chars[i].toUpperCase();
     }
 
-    return chars.join("");
+    return [chars.join("")];
 };
