@@ -3,11 +3,17 @@
 // The input will be a lowercase string with no spaces.
 
 function capitalize(s) {
-    var chars = s.toLowerCase().split("");
 
-    for (var i = 0; i < chars.length; i += 2) {
-        chars[i] = chars[i].toUpperCase();
+    let charsEven = s.toLowerCase().split("");
+    let charsOdd = s.toLowerCase().split("");
+
+    for (let i = 0; i < charsEven.length; i += 2) {
+        charsEven[i] = charsEven[i].toUpperCase();
     }
 
-    return [chars.join("")];
+    for (let i = 1; i < charsOdd.length; i += 2) {
+        charsOdd[i] = charsOdd[i].toUpperCase();
+    }
+
+    return [chars.join(""), charsOdd.join("")];
 };
