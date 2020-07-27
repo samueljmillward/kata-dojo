@@ -9,10 +9,16 @@
 
 function generateHashtag(str) {
     hashtag = '#';
-    return str.length >= 140 || str === '' ? false :
-        hashtag + str.split(' ').map(capitalise).join('');
-}
 
+    let trimmed = str.replace(/\s/g, '');
+
+    if (trimmed === '') {
+        return false;
+    } else {
+        return trimmed.length >= 140 || str === '' ? false :
+            hashtag + str.split(' ').map(capitalise).join('');
+    }
+}
 function capitalise(str) {
     return str.charAt(0).toUpperCase() + str.slice(1)
 }
