@@ -6,7 +6,7 @@ function disemvowel(str) {
     for (i = 0; i < str.length; i++) {
       for (j = 0; j < vowel.length; j++) {
         if(splitStr[i] === vowel[j]) {
-          splitStr.splice(i,1,"")
+          splitStr.splice(i, 1, "")
           }
       }
     }
